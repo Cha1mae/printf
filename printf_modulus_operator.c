@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * Prints_modulus_operator - Print a modulus operator
+ * Printf_modulus_operator - Print a modulus operator
  * @printed: Number of characters printed so far
  * Return: The updated count of printed characters
  */
