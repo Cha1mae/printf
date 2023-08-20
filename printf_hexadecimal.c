@@ -1,51 +1,52 @@
 #include "main.h"
 
 /**
- * printf_binary - Prints the binary of an unsigned integer
- * @num: The unsigned integer to be converted to binary
- * @printed: The count of characters printed so far
- * Return: The updated count of printed characters
+ * _x - Print a hexadecimal number
+ * @num: The number to be printed in hexadecimal
+ * @printed: Count of printed characters
+ * @uppercase: Flag indicating uppercase representation
+ *(1 for uppercase, 0 for lowercase)
+ * Return: Updated count of printed characters
  */
 
-int printf_binary(unsigned int num, int printed)
+int _x(unsigned int num, int printed, int uppercase)
 {
-	int binary[32] = {0}; /* Array to store the binary digits */
+	int hex[100], i = 0, j;
 
-	int i = 0; /* Index for the binary array */
+	while (num != 0)
+	{
+		int remainder = num % 16;
 
-	if (num == 0)
-{
-
-	_putchar('0'); /* Print a '0' if the number is 0 */
-
-	printed++;
-
+		if (remainder < 10)
+		{
+			hex[i] = 48 + remainder;
+		}
+		else
+		{
+			if (uppercase)
+			{
+				hex[i] = 65 + (remainder - 10);
+			}
+			else
+			{
+				hex[i] = 97 + (remainder - 10);
+			}
+		}
+		i++;
+		num /= 16;
+	}
+	if (i == 0)
+	{
+		_putchar('0');
+		printed++;
+	}
+	else
+	{
+		for (j = i - 1; j >= 0; j--)
+		{
+			_putchar(hex[j]);
+			printed++;
+		}
+	}
 	return (printed);
 }
-
-  /* Convert the decimal number to binary */
-while (num > 0)
-{
-
-	binary[i] = num % 2; /* Store the remainder as binary digit */
-
-	num /= 2; /* Divide the number by 2 for the next iteration */
-
-	i++;
-}
-
-/* Print the binary representation digit by digit */
-
-while (i > 0)
-{
-
-	i--;
-
-	_putchar('0' + binary[i]); /* Print the binary digit */
-
-	printed++;
-}
-
-return (printed); /* Return the updated count of printed characters */
-}
-

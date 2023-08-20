@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * printf_unsigned_char - Prints an unsigned integer
- * @num: The unsigned integer to be printed
+ * printf_unsigned- Prints an unsigned integer
+ * @args: List of arguments (unsigned int)
  * @printed: Number of characters printed so far
  * Return: Updated count of printed characters
  */
 
-int printf_unsigned_char(unsigned char num, int printed)
+int printf_unsigned(unsigned int num, int printed)
 {
 	int digits = 0;
-	unsigned char temp = num;
+	unsigned int temp = num;
 
 	do {
 		digits++;

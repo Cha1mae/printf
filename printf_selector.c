@@ -31,13 +31,13 @@ int selector(const char *format, va_list args, int printed)
 			break;
 		case 'x':
 		case 'X':
-			printed = _x(va_arg(args, unsigned int), printed, (*format == 'X') ? 1 : 0);
+			printed = (int)((*format == 'X') ? 1 : 0);
 			break;
 		case 'o':
 			printed = printf_octal(va_arg(args, unsigned int), printed);
 			break;
 		case 'u':
-			printed = printf_unsigned_char(va_arg(args, unsigned char), printed);
+			printed = printf_unsigned(va_arg(args, unsigned int), printed);
 			break;
 		case 'r':
 			printed = printf_reverse(args, printed);
