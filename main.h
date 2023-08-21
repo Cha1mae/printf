@@ -11,6 +11,7 @@
 #define F_HASH  8
 #define F_SPACE 16
 
+int is_digit(char);
 int _putchar(char character);
 int printf_char(va_list args, int printed);
 int printf_string(va_list args, int printed);
