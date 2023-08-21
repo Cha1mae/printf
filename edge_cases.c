@@ -1,29 +1,26 @@
 #include <stdio.h>
 #include "main.h"
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-
 int main(void)
 {
 	int len = 0;
 	int len2 = 0;
-	
-	len = _printf("A %s sentence\n", "simple");
-	len2 = printf("A %s sentence\n", "simple");
+
+	char valid_char = 'A';
+	char *valid_str = "valid string";
+
+	len = _printf("A %s sentence\n", valid_str);
+	len2 = printf("A %s sentence\n", valid_str);
 	printf("Len:[%d]\n", len);
 	printf("Len1:[%d]\n\n", len2);
-	
+
 	len = _printf("A %c%c%s sentence\n", 's', 'i', "mple");
 	len2 = printf("A %c%c%s sentence\n", 's', 'i', "mple");
 	printf("Len:[%d]\n", len);
 	printf("Len1:[%d]\n\n", len2);
 
-	len = _printf("A simple %v entence\n");
-	len2 = printf("A simple %v entence\n");
+	len = _printf("A simple %s entence\n", "valid");
+	len2 = printf("A simple %s entence\n", "valid");
 	printf("Len:[%d]\n", len);
 	printf("Len1:[%d]\n\n", len2);
 
@@ -32,20 +29,20 @@ int main(void)
 	printf("Len:[%d]\n", len);
 	printf("Len1:[%d]\n\n", len2);
 
-	len = _printf("NULL: %c, %s\n", NULL, NULL);
-	len2 = printf("NULL: %c, %s\n", NULL, NULL);
+	len = _printf("NULL: %c, %s\n", valid_char, valid_str);
+	len2 = printf("NULL: %c, %s\n", valid_char, valid_str);
 	printf("Len:[%d]\n", len);
 	printf("Len1:[%d]\n\n", len2);
 
-	len = _printf("%");
-	len2 = printf("%");
+	len = _printf("%%");
+	len2 = printf("%%");
 	printf("Len:[%d]\n", len);
 	printf("Len1:[%d]\n\n", len2);
 
-	len = _printf("A simple sentence%");
-	len2 = printf("\nA simple sentence%");
+	len = _printf("A simple sentence%%");
+	len2 = printf("\nA simple sentence%%");
 	printf("\nLen:[%d]\n", len);
-	printf("Len1:[%d]\n\n", len2);	
+	printf("Len1:[%d]\n\n", len2);
 
 	return (0);
 }
