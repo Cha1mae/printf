@@ -50,4 +50,3 @@ int selector(const char *format, va_list args, int printed)
 	}
 	return (printed);
 }
-

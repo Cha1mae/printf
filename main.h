@@ -11,7 +11,6 @@
 #define F_HASH  8
 #define F_SPACE 16
 
-int is_digit(char);
 int _putchar(char character);
 int printf_char(va_list args, int printed);
 int printf_string(va_list args, int printed);
@@ -24,5 +23,6 @@ int printf_octal(unsigned int num, int printed);
 int printf_unsigned(unsigned int num, int printed);
 int printf_reverse(va_list args, int printed);
 int printf_pointer(va_list args, int printed);
+int Print_rot13string(char *str);
 
 #endif
