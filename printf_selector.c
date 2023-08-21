@@ -37,7 +37,7 @@ int selector(const char *format, va_list args, int printed)
 			printed = printf_octal(va_arg(args, unsigned int), printed);
 			break;
 		case 'u':
-			printed = printf_unsigned(va_arg(args, unsigned int), printed);
+			printed = printf_unsigned int(va_arg(args, unsigned int), printed);
 			break;
 		case 'r':
 			printed = printf_reverse(args, printed);

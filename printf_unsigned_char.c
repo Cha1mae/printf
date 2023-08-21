@@ -2,7 +2,7 @@
 
 /**
  * printf_unsigned- Prints an unsigned integer
- * @args: List of arguments (unsigned int)
+ * @num: Number
  * @printed: Number of characters printed so far
  * Return: Updated count of printed characters
  */
@@ -12,13 +12,15 @@ int printf_unsigned(unsigned int num, int printed)
 	int digits = 0;
 	unsigned int temp = num;
 
-	do
 	{
+		do
+
 		digits++;
 		temp /= 10;
-	} 
-	while (temp != 0);
 
+		while
+			(temp != 0);
+	}
 	if (num == 0)
 	{
 		_putchar('0');

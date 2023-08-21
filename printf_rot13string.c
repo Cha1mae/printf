@@ -9,6 +9,7 @@
 int Print_rot13string(char *str)
 {
 	int printed = 0;
+
 	if (str == NULL)
 		return (0);
 
