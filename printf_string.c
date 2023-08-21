@@ -3,6 +3,7 @@
 /**
  * printf_string - this will print a string
  * @args: List of arguments containing the string to print
+ * @str: string
  * @printed: Number of characters printed so far
  * Return: The updated count of printed characters
  */
