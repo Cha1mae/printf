@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-int  main(void)
+int main(void)
 {
 	int len = 0;
 	int len2 = 0;
@@ -356,4 +356,5 @@ int main(void)
 	 *printf("num2:[%d]\n", num2);
 
 	return (0);
-}
+} 
+
