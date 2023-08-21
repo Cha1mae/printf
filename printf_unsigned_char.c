@@ -16,7 +16,9 @@ int printf_unsigned(unsigned int num, int printed)
 		do
 
 		digits++;
-		temp /= 10;
+
+		while
+			(temp /= 10);
 
 		while
 			(temp != 0);
