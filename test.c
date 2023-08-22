@@ -1,9 +1,5 @@
 #include "main.h"
 
-/**
- * Return: Updated count of printed characters
- */
-
 int printf_reverse(va_list args, int printed)
 {
 	
