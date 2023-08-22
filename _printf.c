@@ -11,7 +11,10 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	if (format == NULL)
+	{
+		va_end(args);
 		return (-1);
+	}
 
 	va_start(args, format);
 
