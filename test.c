@@ -8,15 +8,7 @@
  * Return: Updated count of printed characters
  */
 
-int printf_reverse(va_list args, int printed)
-
-	int len = 0, i;
-
-	while (str[len])
-	{
-		len++;
-	}
-
+in
 	for (i = len - 1; i >= 0; i--)
 	{
 		_putchar(str[i]);
