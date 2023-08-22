@@ -5,7 +5,7 @@ int printf_reverse(va_list args, int printed)
 	
 		
 	{
-		_putchar(str[i]);
+		
 		printed++;
 
 	}
