@@ -44,7 +44,7 @@ int selector(const char *format, va_list args, int printed)
 			break;
 		default:
 			printed += _putchar('%');
-			printed = _putchar(*format);
+			printed += _putchar(*format);
 			break;
 	}
 	return (printed);
