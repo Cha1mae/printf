@@ -9,9 +9,9 @@
 
 int printf_integer(va_list args, int printed)
 {
-	int num = va_arg(args, int);
+	long  num = va_arg(args, int);
 	int digits = 0;
-	int temp = num;
+	long temp = num;
 	int digit;
 
 	if (num < 0)
