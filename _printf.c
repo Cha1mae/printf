@@ -3,7 +3,6 @@
 /**
  * _printf - Implementation of the built-in printf function
  * @format: The format specifier string
- * selector : Choose the appropriate function based on the frmat specfier
  * Return: The number of characters printed
  */
 int _printf(const char *format, ...)

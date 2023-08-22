@@ -10,6 +10,7 @@
 #define F_ZERO  4
 #define F_HASH  8
 #define F_SPACE 16
+#define BUFF_SIZE 1024
 
 int _putchar(char character);
 int printf_char(va_list args, int printed);
@@ -24,5 +25,11 @@ int printf_unsigned(unsigned int num, int printed);
 int printf_reverse(va_list args, int printed);
 int printf_pointer(va_list args, int printed);
 int Print_rot13string(char *str);
+int get_flags(const char *format, int *index);
+int get_width(const char *format, int *index, va_list args);
+int get_precision(const char *format, int *index, va_list args);
+int get_size(const char *format, int *index);
+int handle_print(const char *format, int *index, va_list args,
+                 char buffer[], int flags, int width, int precision, int size);
 
 #endif
