@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * 
- * @args: List of arguments (string)
+
  * @printed: Number of characters printed so far
  * Return: Updated count of printed characters
  */
