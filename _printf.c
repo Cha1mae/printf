@@ -10,6 +10,9 @@ int _printf(const char *format, ...)
 	int printed = 0;
 	va_list args;
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(args, format);
 
 	while (*format != '\0')
@@ -17,6 +20,8 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
+			if (*format == '\0')
+				return (-1);
 			printed = selector(format, args, printed);
 			format++;
 		}
@@ -27,7 +32,6 @@ int _printf(const char *format, ...)
 			format++;
 		}
 	}
-
 	va_end(args);
 	return (printed);
 }
